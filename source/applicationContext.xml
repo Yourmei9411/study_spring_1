@@ -13,4 +13,12 @@
 		<property name="name2" value="Caffrey"></property>
 	</bean>
 	
+	<!-- 使用构造器注入属性值可以指定参数的位置和参数的类型 以此区分重载的构造器  -->
+	<bean id="user1" class="beans.User">
+		<constructor-arg value="Caffrey" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="1001" type="int"></constructor-arg>
+		<constructor-arg value="405140692@qq.com" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="24" type="int"></constructor-arg>
+	</bean>
+	
 </beans>

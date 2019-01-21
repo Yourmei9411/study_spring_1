@@ -19,6 +19,9 @@ public class Main {
 		
 		//3.调用hello方法
 		helloWorld.sayHello();
+		
+		User user1 = (User) context.getBean("user1");
+		System.out.println(user1);
 	}
 
 }
