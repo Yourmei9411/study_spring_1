@@ -5,6 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
+	<!-- class为bean的全类名，通过反射的方式构造bean，因此类必须有无参的构造器 -->
 	<bean id="helloworld" class="beans.HelloWorld">
 		<!-- 根据HelloWorld类中的setter方法setName2设置值 -->
 		<property name="name2" value="Caffrey"></property>
