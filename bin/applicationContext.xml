@@ -15,7 +15,10 @@
 	
 	<!-- 使用构造器注入属性值可以指定参数的位置和参数的类型 以此区分重载的构造器  -->
 	<bean id="user1" class="beans.User">
-		<constructor-arg value="Caffrey" type="java.lang.String"></constructor-arg>
+		<!-- 如果字面值包含特殊字符可以使用<![CDATA[]]>包裹起来 -->
+		<constructor-arg type="java.lang.String">
+			<value><![CDATA[<yourmei^>]]></value>
+		</constructor-arg>
 		<constructor-arg value="1001" type="int"></constructor-arg>
 		<constructor-arg value="405140692@qq.com" type="java.lang.String"></constructor-arg>
 		<constructor-arg value="24" type="int"></constructor-arg>
