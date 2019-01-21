@@ -8,7 +8,8 @@ public class HelloWorld {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName2(String name) {
+		System.out.println("setting name :" + name);
 		this.name = name;
 	}
 
@@ -19,6 +20,7 @@ public class HelloWorld {
 
 	public HelloWorld() {
 		super();
+		System.out.println("constructor for HelloWorld");
 		// TODO Auto-generated constructor stub
 	}
 	
