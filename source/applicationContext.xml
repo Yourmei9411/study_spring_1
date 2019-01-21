@@ -24,4 +24,17 @@
 		<constructor-arg value="24" type="int"></constructor-arg>
 	</bean>
 	
+	<bean id="carForCaffrey" class="beans.Car">
+		<property name="brand" value="Audi"></property>
+		<property name="price" value="250000"></property>
+	</bean>
+	
+	<bean id="Caffrey" class="beans.User">
+		<property name="userName" value="Caffrey"></property>
+		<property name="userNumber" value="1002"></property>
+		<property name="email" value="405140692@qq.com"></property>
+		<property name="age" value="24"></property>
+		<!-- 使用property的ref属性建立bean之间的关系 -->
+		<property name="car" ref="carForCaffrey"></property>
+	</bean>
 </beans>

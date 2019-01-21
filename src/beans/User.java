@@ -6,10 +6,33 @@ public class User {
 	private int userNumber;
 	private String email;
 	private int age;
+	
+	private Car car;
+	
+
+	
+	
+	
 	@Override
 	public String toString() {
-		return "User [userName=" + userName + ", userNumber=" + userNumber + ", email=" + email + ", age=" + age + "]";
+		return "User [userName=" + userName + ", userNumber=" + userNumber + ", email=" + email + ", age=" + age
+				+ ", car=" + car + "]";
 	}
+
+
+
+	public Car getCar() {
+		return car;
+	}
+
+
+
+	public void setCar(Car car) {
+		this.car = car;
+	}
+
+
+
 	public String getUserName() {
 		return userName;
 	}
