@@ -28,6 +28,9 @@ public class Main {
 		
 		User Ouyang = (User) context.getBean("Ouyang");
 		System.out.println(Ouyang);
+		
+		User OuyangWithCar = (User) context.getBean("OuyangWithCar");
+		System.out.println(OuyangWithCar);
 	}
 
 }

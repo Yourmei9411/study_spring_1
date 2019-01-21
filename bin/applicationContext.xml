@@ -51,4 +51,15 @@
 			</bean>
 		</property>
 	</bean>
+	
+	<bean id="OuyangWithCar" class="beans.User">
+		<property name="userName" value="Ouyang"></property>
+		<property name="userNumber" value="1002"></property>
+		<property name="email" value="405140692@qq.com"></property>
+		<property name="age" value="24"></property>
+		<!-- 级联属性:必须先给对象属性先赋值，才可以用级联属性赋值，否则会出现null异常 -->
+		<property name="car" ref="carForCaffrey"></property>
+		<!-- 由于是单例的bean，因此引用过carForCaffrey的Caffrey对象的车的brand属性也会发生变化 -->
+		<property name="car.brand" value="abc"></property>
+	</bean>
 </beans>
