@@ -37,4 +37,18 @@
 		<!-- 使用property的ref属性建立bean之间的关系 -->
 		<property name="car" ref="carForCaffrey"></property>
 	</bean>
+	
+	<bean id="Ouyang" class="beans.User">
+		<property name="userName" value="Ouyang"></property>
+		<property name="userNumber" value="1002"></property>
+		<property name="email" value="405140692@qq.com"></property>
+		<property name="age" value="24"></property>
+		<!-- 内部bean 不能被外部引用 -->
+		<property name="car">
+			<bean class="beans.Car">
+				<constructor-arg type="java.lang.String" value="Benz"></constructor-arg>
+				<constructor-arg type="int" value="500000"></constructor-arg>
+			</bean>
+		</property>
+	</bean>
 </beans>

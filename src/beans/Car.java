@@ -21,4 +21,15 @@ public class Car {
 	public String toString() {
 		return "Car [brand=" + brand + ", price=" + price + "]";
 	}
+	public Car(String brand, int price) {
+		super();
+		this.brand = brand;
+		this.price = price;
+	}
+	public Car() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 }
