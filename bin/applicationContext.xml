@@ -9,6 +9,7 @@
 	<!-- 通过id来获取bean -->
 	<bean id="helloworld" class="beans.HelloWorld">
 		<!-- 根据HelloWorld类中的setter方法setName2设置值 -->
+		<!-- 属性注入：即通过setter方法注入bean的属性值或依赖的对象，使用property元素 -->
 		<property name="name2" value="Caffrey"></property>
 	</bean>
 	
