@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="address" class="autowired.Address" p:city="Beijing" p:street="baheli"></bean>
+	<bean id="book" class="autowired.Book" p:bookName="book1" p:page="565"></bean>
+	
+	<!-- byName:根据bean的名字和当前bean的setter 风格的属性名进行自动装配，若有匹配的，则进行自动装配，若没有，则不装配 -->
+	<!-- <bean id="person1" p:name="Caffrey" class="autowired.Person" autowire="byName"></bean> -->
+
+	<!-- byType 根据bean的类型和当前的属性的类型进行自动装配 -->
+	<bean id="person1" p:name="Caffrey" class="autowired.Person" autowire="byType"></bean>
+</beans>
