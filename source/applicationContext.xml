@@ -62,4 +62,61 @@
 		<!-- 由于是单例的bean，因此引用过carForCaffrey的Caffrey对象的车的brand属性也会发生变化 -->
 		<property name="car.brand" value="abc"></property>
 	</bean>
+	
+	<bean id="book1" class="beans.Book">
+		<property name="bookName" value="book1"></property>
+		<property name="pages" value="754"></property>
+	</bean>
+	
+	<bean id="book2" class="beans.Book">
+		<property name="bookName" value="book2"></property>
+		<property name="pages" value="356"></property>
+	</bean>
+	
+	<bean id="student1" class="beans.Student">
+		<property name="stuName" value="student1"></property>
+		<property name="books">
+			<!-- 集合属性 -->
+			<list>
+			<!-- 引用外部bean -->
+				<ref bean="book1"/>
+				<ref bean="book2"/>
+			<!-- 引用内部bean -->
+				<bean class="beans.Book">
+					<property name="bookName" value="book3"></property>
+					<property name="pages" value="154"></property>
+				</bean>
+			</list>
+		</property>
+	</bean>
 </beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
