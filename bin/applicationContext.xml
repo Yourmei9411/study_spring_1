@@ -89,6 +89,22 @@
 			</list>
 		</property>
 	</bean>
+	
+	<bean id="book3" class="beans.Book">
+					<property name="bookName" value="book3"></property>
+					<property name="pages" value="230"></property>
+	</bean>
+	
+	<bean id="bookstore1" class="beans.BookStroe">
+		<property name="bookstoreName" value="Junan BookStore"></property>
+		<property name="books">
+			<map>
+				<entry key="2001" value-ref="book1"></entry>
+				<entry key="2002" value-ref="book2"></entry>
+				<entry key="2003" value-ref="book3"></entry>
+			</map>
+		</property>
+	</bean>
 </beans>
 
 

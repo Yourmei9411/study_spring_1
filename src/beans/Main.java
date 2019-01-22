@@ -34,6 +34,9 @@ public class Main {
 		
 		Student stu1 = (Student) context.getBean("student1");
 		System.out.println(stu1);
+		
+		BookStroe bookStroe = (BookStroe) context.getBean("bookstore1");
+		System.out.println(bookStroe);
 	}
 
 }
