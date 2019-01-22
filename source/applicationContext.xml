@@ -105,6 +105,17 @@
 			</map>
 		</property>
 	</bean>
+	
+	<bean id="dataSource1" class="beans.DataSource">
+		<property name="properties">
+			<props>
+				<prop key="user">root</prop>
+				<prop key="password">123456</prop>
+				<prop key="jdbcurl">jdbc:mysql:///test</prop>
+				<prop key="driverclass">com.mysql.jdbc.driver</prop>
+			</props>
+		</property>
+	</bean>
 </beans>
 
 

@@ -37,6 +37,9 @@ public class Main {
 		
 		BookStroe bookStroe = (BookStroe) context.getBean("bookstore1");
 		System.out.println(bookStroe);
+		
+		DataSource dataSource1 = (DataSource) context.getBean("dataSource1");
+		System.out.println(dataSource1);
 	}
 
 }
