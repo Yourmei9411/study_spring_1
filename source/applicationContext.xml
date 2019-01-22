@@ -2,8 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
 	<!-- class为bean的全类名，通过反射的方式构造bean，因此类必须有无参的构造器 -->
 	<!-- 通过id来获取bean -->
@@ -115,6 +117,26 @@
 				<prop key="driverclass">com.mysql.jdbc.driver</prop>
 			</props>
 		</property>
+	</bean>
+	
+	<util:list id="books_">
+		<bean class="beans.Book">
+			<property name="bookName" value="books_1"></property>
+			<property name="pages" value="175"></property>
+		</bean>	
+		<bean class="beans.Book">
+			<property name="bookName" value="books_2"></property>
+			<property name="pages" value="585"></property>
+		</bean>		
+		<bean class="beans.Book">
+			<property name="bookName" value="books_3"></property>
+			<property name="pages" value="693"></property>
+		</bean>			
+	</util:list>
+	
+	<bean id="student_Ouyang" class="beans.Student">
+		<property name="stuName" value="student_Ouyang"></property>
+		<property name="books" ref="books_"></property>
 	</bean>
 </beans>
 

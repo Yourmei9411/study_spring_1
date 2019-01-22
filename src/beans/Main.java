@@ -40,6 +40,9 @@ public class Main {
 		
 		DataSource dataSource1 = (DataSource) context.getBean("dataSource1");
 		System.out.println(dataSource1);
+		
+		Student student_Ouyang = (Student) context.getBean("student_Ouyang");
+		System.out.println(student_Ouyang);
 	}
 
 }
