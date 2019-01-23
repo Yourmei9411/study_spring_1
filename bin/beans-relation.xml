@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="address1" class="relation.Address" 
+		p:city="BeiJing" p:street="WuDaoKou"></bean>
+
+	<!-- parent属性可用于继承类 -->
+	<bean id="address2" class="relation.Address"
+		p:street="ChaoYang" parent="address1"></bean>
+
+	<!-- 抽象bean，不可以实例化 , 可以用于继承-->
+	<bean id="address_abstract" class="relation.Address"
+		p:city="Foshan" abstract="true"></bean>
+	<!-- 若某一个bean的class属性没有被指定，则该bean一定要是抽象bean -->
+	<bean id="address_abstract2" 
+		p:city="Foshan" abstract="true"></bean>
+		
+	<bean id="address3" class="relation.Address"
+		p:street="Jun'an" parent="address_abstract"></bean>
+</beans>
