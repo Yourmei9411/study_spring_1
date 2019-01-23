@@ -20,4 +20,10 @@
 		
 	<bean id="address3" class="relation.Address"
 		p:street="Jun'an" parent="address_abstract"></bean>
+	
+	<bean id="address_caf" class="relation.Address"
+		p:street="shunde" p:city="Foshan"></bean>
+	<!-- 要求在配置bean时，必须有一个关联的 address_caf， 即这个bean依赖于address_caf这个bean-->
+	<bean id="student1" class="relation.Student"
+		depends-on="address_caf" p:name="Caffrey"></bean>
 </beans>
