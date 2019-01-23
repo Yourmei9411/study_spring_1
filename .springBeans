@@ -12,6 +12,7 @@
 		<config>source/beans-relation.xml</config>
 		<config>source/scope.xml</config>
 		<config>source/properties.xml</config>
+		<config>source/beancycle.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
