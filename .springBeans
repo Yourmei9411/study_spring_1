@@ -13,6 +13,7 @@
 		<config>source/scope.xml</config>
 		<config>source/properties.xml</config>
 		<config>source/beancycle.xml</config>
+		<config>source/factory.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
